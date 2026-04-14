@@ -12,13 +12,13 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-7.0-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com)
 [![Socket.io](https://img.shields.io/badge/Socket.io-4.7-010101?style=for-the-badge&logo=socketdotio&logoColor=white)](https://socket.io)
 
-![alt text](image-7.png)
+![alt text](./images/image-7.png)
 
-![alt text](image-5.png)
+![alt text](./images/image-5.png)
 
-![alt text](image-6.png)
+![alt text](./images/image-6.png)
 
-![alt text](image-8.png)
+![alt text](./images/image-8.png)
 
 <br/>
 
@@ -246,20 +246,20 @@ Open **http://localhost:5173**
 
 ### Real-time Chat
 The chat uses Socket.io for instant delivery. Each user joins a room named after their MongoDB `_id`. When a message is sent, the server saves it to MongoDB first, then emits it to the recipient's room. This ensures messages persist across refreshes.
-![alt text](image.png)
+![alt text](./images/image.png)
 
 ### Data Pills
 When a workout plan is shared via chat, it's encoded as a JSON string inside the `workoutSnapshot` field. The receiving client detects and parses this, rendering it as a clickable "View Plan (4 exercises)" button rather than raw JSON text.
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](./images/image-1.png)
+![alt text](./images/image-2.png)
 
 ### Clickable Charts
 The bar chart (Recharts `BarChart`) uses the `onClick` prop on each `<Bar>` to call `onDaySelect(barData.key)`. This updates `selectedDay` state in `HomePage`, which filters both the stat cards and the workout list to show only that day's data.
-![alt text](image-3.png)
+![alt text](./images/image-3.png)
 
 ### Rest Timer
 The timer state (`isOpen`) lives in `TimerContext` — a global context. `RestTimerOverlay` is rendered as a sibling of the blurred page wrapper in `App.jsx`, so it appears clearly above the blur. The countdown uses `setInterval` inside a `useEffect`, with a `useRef` to store the interval ID for reliable cleanup.
-![alt text](image-4.png)
+![alt text](./images/image-4.png)
 
 ---
 
